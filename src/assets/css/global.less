@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  color: #666;
+}
+
+// 首页模块标题公共样式
+.indexCommonTitle {
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 3px;
+  border-bottom: 1px solid #eee;
+  color: #5aa3e8;
+  margin-bottom: 5px;
+}
+
+// 首页模块 文本居左
+.alignAndBot15 {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+// 首页模块标题样式
+.latestLitle {
+  .indexCommonTitle;
+
+  span {
+    &:nth-child(2) {
+      float: right;
+      padding-top: 4px;
+      margin-right: 4px;
+
+      a {
+        color: #5aa3e8;
+      }
+    }
+  }
+}
+
+// 最新资讯 综合交通 政策公告
+.onlyNews {
+  .alignAndBot15;
+
+  .news {
+    // padding: 5px 0;
+    li {
+      font-size: 14px;
+      padding: 7px 5px;
+      margin-bottom: 5px;
+      // border-bottom: 1px dashed #eee;
+      a{
+        // height: 25px;
+        // line-height: 25px;
+        // .ellipsis;
+      }
+    }
+  }
+}
+
+// 图片新闻
+.picNews {
+  .alignAndBot15;
+
+  ul {
+    li {
+      a {
+        padding: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px dashed #eee;
+
+        .picAndnews {
+          position: relative;
+          min-height: 90px;
+          padding: 10px 5px;
+          padding-right: 90px;
+          box-sizing: border-box;
+
+          .newsPic {
+            position: absolute;
+            top: 5px;
+            right: 0;
+          }
+
+          img {
+            height: 80px;
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+// 单行溢出
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 最热文章
+.hotArticle {
+  li {
+    //   .ellipsis;
+    &:nth-child(-n + 3) {
+      a {
+        position: relative;
+        padding-left: 15px;
+        box-sizing: border-box;
+
+        span {
+          &:first-child {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            color: orange;
+          }
+        }
+      }
+    }
+    a {
+      display: inline-block;
+    }
+  }
+}

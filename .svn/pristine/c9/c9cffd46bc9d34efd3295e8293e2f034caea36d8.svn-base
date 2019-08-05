@@ -1,0 +1,25 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import axios from 'axios'
+// 阿里手淘伸缩布局方案
+import 'amfe-flexible';
+import './assets/css/global.less'
+
+import { Tab, Tabs,Icon,Swipe, SwipeItem,Row, Col  } from 'vant';
+
+Vue.use(Tab).use(Tabs);
+Vue.use(Swipe).use(SwipeItem);
+Vue.use(Row).use(Col);
+Vue.use(Icon);
+Vue.config.productionTip = false
+
+// main.js
+Vue.prototype.Bus=new Vue();
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
